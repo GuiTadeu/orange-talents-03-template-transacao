@@ -35,15 +35,35 @@ public class TransactionEvent {
         return estabelecimento;
     }
 
+    public String getNomeEstabelecimento() {
+        return estabelecimento.getNome();
+    }
+
+    public String getCidadeEstabelecimento() {
+        return estabelecimento.getCidade();
+    }
+
+    public String getEnderecoEstabelecimento() {
+        return estabelecimento.getEndereco();
+    }
+
     public Cartao getCartao() {
         return cartao;
+    }
+
+    public String getCartaoId() {
+        return cartao.getId();
+    }
+
+    public String getCartaoEmail() {
+        return cartao.getEmail();
     }
 
     public LocalDateTime getEfetivadaEm() {
         return efetivadaEm;
     }
 
-    private class Estabelecimento {
+    public class Estabelecimento {
 
         private String nome;
         private String cidade;
@@ -71,7 +91,7 @@ public class TransactionEvent {
         }
     }
 
-    private class Cartao {
+    public class Cartao {
 
         private String id;
         private String email;
